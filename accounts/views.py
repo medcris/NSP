@@ -164,7 +164,7 @@ def registration_view(request):
                 return redirect('/account')
             else:
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-                return render(request, 'accounts/signup.html')
+                return render(request, 'accounts/signup.html',{'form': form})
 
             # this is /account
         else:
